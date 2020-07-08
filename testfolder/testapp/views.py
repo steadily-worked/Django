@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post
+from .models import Post, Album
 from django.utils import timezone
 
 # Create your views here.
@@ -45,3 +45,7 @@ def delete(request, num):
     post = Post.objects.get(id = num)
     post.delete()
     return redirect('/')
+
+def album(request):
+    img = Album.objects.all()
+    return render(request, 'album.html', {"images" : img})

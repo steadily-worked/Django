@@ -12,8 +12,19 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class Album(models.Model):
+    title = models.CharField(max_length = 200)
+    body = models.TextField()
+    img = models.ImageField(upload_to="album/") #media 폴더 안에 album 폴더를 만들고 거기에 넣어줌.
+    
+    def __str__(self):
+        return self.title
     #"python manage.py makemigrations -> 파이썬으로 작성된 것을 DB 언어로 바꿔준다."
     #"python manage.py migrate -> DB에 적용"
+
+        #Pillow -> 파이썬에서 이미지파일을 다루기 위한 라이브러리.
+        #DB -> 이미지 자체로 저장을 할 수가 없어서 알아들을 수 있게 변환하는 프로그램이 필요함.그게 Pillow.
+        #새롭게 해준 후에, python manage.py makemigrations -> python manage.py migrate 순으로 ㄱㄱ
 
 
     #models.py에서

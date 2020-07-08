@@ -14,16 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 import testapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', testapp.views.home, name='home'),
-    path('detail/<int:num>', testapp.views.detail, name="detail"),
-    path('new/', testapp.views.new, name = 'new'),
-    path('new/create',testapp.views.create, name='create'),
-    path('update/<int:num>', testapp.views.update, name="update"), #update/2 -> update(request, num)
-    path('delete/<int:num>', testapp.views.delete, name='delete'), #delete/2 -> delete(request, num=2)
-]
+    path('blog/', include('testapp.urls')), #testapp에 있는 url들에 blog를 앞에 붙여줌
+    path('accounts/', include('accounts.urls')),
+    ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # "python manage.py createsuperuser -> 관리자페이지 로그인을 위한 계정 생성"
