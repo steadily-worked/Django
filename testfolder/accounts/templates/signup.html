@@ -9,7 +9,7 @@
 {% csrf_token %}
 Username:
 <br>
-<input name="username"  type="text" value="">
+<input name="username"  type="text" value="{{profile.user.username}}">
 <br>
 Password:
 <br>
@@ -18,6 +18,12 @@ Password:
 Confirm Password:
 <br>
 <input name="password2"  type="password" value="">
+<br>
+<br>
+<input name="major"  type="text" value="{{profile.major}}">
+<br>
+<br>
+<input name="phone"  type="text" value="{{profile.phone}}">
 <br>
 <br>
 <input class="btn btn-primary" type="submit" value="Sign Up!">

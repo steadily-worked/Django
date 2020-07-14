@@ -27,7 +27,7 @@ def create(request):
     post.body = request.GET['body']
     post.pub_date = timezone.datetime.now()
     post.save()
-    return redirect('/detail/'+str(post.id))
+    return redirect('detail', num = post.id)
 
 def update(request, num):
     post = Post.objects.get(id=num)
