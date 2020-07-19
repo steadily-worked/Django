@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -119,3 +119,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'testapp', 'static')
+]
+#STATICFILES_DIRS : static 파일들이 들어있는 경로(앱 이름, 폴더명)를 적어준다.
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#Django에서는 편의를 위해 흩어져있는 static 파일을 한 곳에 모으는데, 그 때 파일을 모아줄 위치를 나타낸다.
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+#static : 개발자가 준비하는 파일, media : 이용자들이 올리는 파일

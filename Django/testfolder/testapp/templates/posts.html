@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for row in post_list %} <!-- views.py에서 post_list로 넘겨받은 리스트 요소들을 row라는 것으로 반복하겠다는 것. -->
+    <div>
+        제목 : {{row.title}}<br>
+        내용 : {{row.body}}<br>
+        작성시간 : {{row.pub_date}}<br>
+    </div>
+    <br>
+    {% endfor %}
+</body>
+</html>

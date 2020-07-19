@@ -15,15 +15,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from testapp import views
 #연결:views.py에서 정의한 함수 써먹기
+from django.conf import settings
+from django.conf.urls.static import static
 import testapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', testapp.views.home, name='home'),
-    path('about/', testapp.views.about, name='about'),
-    path('count/', testapp.views.count, name='count'),
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('count/', views.count, name='count'),
+    path('post/', views.show_post, name='post'),
+    path('new/', views.new, name='new'),
+    path('detail/<int:num>', views.detail,name='detail'),
+    path('new/create', views.create, name='create'),
+    path('update/<int:num>', views.update, name='update'), # 글의 id를 num이라는 변수로 받겠다는 것.
+    path('delete/<int:num>', views.delete, name='delete'),
+    path('album/', views.album, name='album')
     # '' : route(도메인 뒤에 붙는 url부분)
     # testapp.views.home -> "testapp의 views.py에서 정의내린 home 함수를 실행해주세요"
     # name='home' -> "이 path의 이름을 'home'이라고 할게요!"의 의미. 가급적 함수이름와 name을 일치시켜주자.
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

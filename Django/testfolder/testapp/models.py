@@ -11,3 +11,7 @@ class Post(models.Model): # Post라는 제목을 가진 표를 만들것.
     # pub_date라는 필드(열)를 만들고, 그 안에 데이터 형식은 DateTime, 즉 날짜와 시간 형식으로 생성할 것.
     body = models.TextField()
     # body 라는 필드(열)를 만들고, 그 안의 데이터 형식은 긴 문자열로 할 것.
+    def __str__(self):
+        return self.title
+class Ptoho(models, Model):
+    
