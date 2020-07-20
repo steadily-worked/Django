@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'update' result.id %}" method = "POST">
+        {% csrf_token %}
+        <h4>제목: </h4>
+        <input type="text" name="title" value="{{result.title}}">
+        <br>
+        <br>
+        <h4>본문: </h4>
+        <textarea cols=40 rows=10 name="body">{{result.body}}</textarea>
+        <br>
+        <br>
+        <input class="btn btn-dark" type="submit" value="완료">
+    </form>
+</body>
+</html>
