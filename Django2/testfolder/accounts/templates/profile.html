@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Profile</h1>
+
+<form method="POST" action="{% url 'profile' %}">
+
+{% csrf_token %}
+Username:
+<br>
+<input name="username"  type="text" value="{{profile.user.username}}">
+<br>
+Password:
+<br>
+<input name="password1"  type="password" value="">
+<br>
+Confirm Password:
+<br>
+<input name="password2"  type="password" value="">
+<br>
+학번:
+<input name="std_num"  type="text" value="">
+<br>
+전공:
+<input name="major"  type="text" value="">
+<br>
+번호:
+<input name="phone"  type="text" value="">
+<br>
+<br>
+<input class="btn btn-primary" type="submit" value="업데이트!">
+</form>
+
+{% endblock %}

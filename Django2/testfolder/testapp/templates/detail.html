@@ -31,9 +31,10 @@
     </nav>
 
     <div class="container jumbotron">
-        <h1>{{ result.title }}</h1>
-        <p>{{ result.pub_date }}</p>
-        <p>{{ result.body }}</p>
+        <h1>제목 : {{ result.title }}</h1>
+        <p>작성 시간 : {{ result.pub_date }}</p>
+        <p>내용 : {{ result.body }}</p>
+        <p>작성자 : {{ content.user.username }}</p>
         <a href="{% url 'update' result.id %}">수정하기</a>
         <a href="{% url 'home' %}">돌아가기</a>
     </div>

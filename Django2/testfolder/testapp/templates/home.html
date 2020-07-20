@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 <html lang="en">
 
 <head>
@@ -31,13 +33,18 @@
     </nav>
 
     <div class="container jumbotron">
+    {% block content %}
         {% for row in post_list %}
         <div>
             <a href="{% url 'detail' row.id %}"><h1>제목 : {{row.title}}</h1></a><br>
+            <p>작성자 : {{row.user.username}}</p>
         </div>
         <br>
         <a href="{% url 'delete' row.id %}">삭제하기</a>
-		{%endfor%}
+        {%endfor%}
+    <a href="{% url 'new' %}">글쓰기</a>
+
+    {% endblock %}
     </div>
 
     <!-- bootstrap4 js관련 CDN 부분 -->
