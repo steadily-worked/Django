@@ -16,6 +16,10 @@
     position: absolute; left:50%; top:20%; transform: translate(-50%,-50%);
     text-align: center;
 }
+.evaluation-contents {
+    position: absolute; left:50%; top:50%; transform: translate(-50%,-50%);
+    text-align: center;
+}
 
 .contents > p {
     text-align: center;
@@ -51,10 +55,70 @@
 
 table {
     width: 1000px;
+    border-left: none;
+    border-right: none;
 }
 
 .info2 {
     text-align: center;
     display: block;
     margin: 0 auto;
+}
+
+.eval-question1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.eval-question1 > input {
+    margin-bottom: 30px;
+}
+
+.star{
+    display:inline-block;
+    width: 30px;height: 60px;
+    cursor: pointer;
+  }
+  .star_left{
+    background: url(http://gahyun.wooga.kr/main/img/testImg/star.png) no-repeat 0 0; 
+    background-size: 60px; 
+    margin-right: -3px;
+  }
+  .star_right{
+    background: url(http://gahyun.wooga.kr/main/img/testImg/star.png) no-repeat -30px 0; 
+    background-size: 60px; 
+    margin-left: -3px;
+  }
+  .star.on{
+    background-image: url(http://gahyun.wooga.kr/main/img/testImg/star_on.png);
+  }
+
+  .star-box {
+      margin-bottom: 50px;
+  }
+
+.button {
+    float: right;
+    width: 154px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: blue;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    border: none;
+    border-color: #53ad78;
+}
+button h3 {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+.textarea {
+    width: 400px;
+    height: 200px;
+    display: block;
+    resize: none;
+    margin-bottom: 15px;
 }
