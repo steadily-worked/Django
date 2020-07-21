@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel='stylesheet' href='{% css/styles.css %}'>
+    <link rel='stylesheet' type = "text/css" href="{% static 'css/styles.css'%}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -32,13 +32,13 @@
                             <th>연도 / 학기</th>
                             <td>
                                  <select>
-                                    <option selected>2020</option>
-                                    <option>2019</option>
-                                    <option>2018</option>
-                                    <option>2017</option>
-                                    <option>2016</option>
-                                    <option>2015</option>
-                                    <option>2014</option>
+                                    <option selected value = 20>2020</option>
+                                    <option value = 19>2019</option>
+                                    <option value = 18>2018</option>
+                                    <option value = 17>2017</option>
+                                    <option value = 16>2016</option>
+                                    <option value = 15>2015</option>
+                                    <option value = 14>2014</option>
                                 </select>
                                 <select>
                                     <option selected>1st semester</option>
@@ -51,288 +51,292 @@
                                         <td>
                                             <div class="selectBox">
                                                 <select name="ag_crs_strct_cd">
+
+                                                    <option>
+                                                        --- 학과를 선택해주세요 ---
+                                                    </option>
                                                 
-                                                    <option value="ATMB3_H1">
+                                                    <option value="AI융합전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;AI융합전공&nbsp;(Artificial Intelligence Convergence)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAR01_H1">
+                                                    <option value="CORE글로벌지역학">
                                                         &nbsp;(서울)&nbsp;-&nbsp;CORE글로벌지역학&nbsp;(CORE Global Studies)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A1CE1_H1">
+                                                    <option value="EICC학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;EICC학과&nbsp;(Department of English for International Conferences and Communication)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A1CG1_H1" selected="">
+                                                    <option value="ELLT학과" selected="">
                                                         &nbsp;(서울)&nbsp;-&nbsp;ELLT학과&nbsp;(Department of English Linguistics &amp; Language Technology)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAQ01_H1">
+                                                    <option value="EU전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;EU전공&nbsp;(EU  Major)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAMB1_H1">
+                                                    <option value="FATI전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;FATI전공&nbsp;(FATI)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A5A_H1">
+                                                    <option value="KFL학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;KFL학부&nbsp;(Division of Korean as a Foreign Language)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AKAA1_H1">
+                                                    <option value="Language Diplomacy전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;Language &amp; Diplomacy전공&nbsp;(Language &amp; Diplomacy)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AKA_H1">
+                                                    <option value="Langugage Diplomacy학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;Language &amp; Diplomacy학부&nbsp;(Division of Language &amp; Diplomacy)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A2AA1_H1">
+                                                    <option value="Language Trade전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;Language &amp; Trade전공&nbsp;(Language &amp; Trade)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A2A_H1">
+                                                    <option value="Language Trade학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;Language &amp; Trade학부&nbsp;(Division of Language &amp; Trade)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ALA_H1">
+                                                    <option value="경영학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;경영학부&nbsp;(Business Administration Division)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ALAA1_H1">
+                                                    <option value="경영학전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;경영학전공&nbsp;(Business Administration)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AEC_H1">
+                                                    <option value="경제학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;경제학부&nbsp;(Division of Economics)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AECA1_H1">
+                                                    <option value="경제학전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;경제학전공&nbsp;(Economics)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ACDD1_H1">
+                                                    <option value="광고·PR·브랜딩전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;광고·PR·브랜딩전공&nbsp;(Advertising·Public Relations·Branding)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AFF01_H1">
+                                                    <option value="교육학">
                                                         &nbsp;(서울)&nbsp;-&nbsp;교육학&nbsp;(Education)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ACAI1_H1">
+                                                    <option value="국가리더전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;국가리더전공&nbsp;(National Leader)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AEAA1_H1">
+                                                    <option value="국제통상학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;국제통상학과&nbsp;(Department of International  Economics and Law)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AGA_H1">
+                                                    <option value="국제학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;국제학부&nbsp;(Division of International Studies)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AGAA1_H1">
+                                                    <option value="국제학전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;국제학전공&nbsp;(International Studies)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAH01_H1">
+                                                    <option value="네덜란드어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;네덜란드어과&nbsp;(Department of Dutch)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAD01_H1">
+                                                    <option value="노어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;노어과&nbsp;(Department of Russian)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAC01_H1">
+                                                    <option value="독일어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;독일어과&nbsp;(Department of German)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AFC01_H1">
+                                                    <option value="독일어교육과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;독일어교육과&nbsp;(Department of German Education)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABP02_H1">
+                                                    <option value="동북아외교통상전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;동북아외교통상전공&nbsp;(North-East Asian Foreign Affairs and Commerce)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ANJA1_H1">
+                                                    <option value="디지털인문한국학전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;디지털인문한국학전공&nbsp;(Digital Korean Studies in Humanities)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABC01_H1">
+                                                    <option value="말레이.인도네시아어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;말레이.인도네시아어과&nbsp;(Department of Malay-Indonesian)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABJ01_H1">
+                                                    <option value="몽골어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;몽골어과&nbsp;(Department  of Mongolian)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ANDD2_H1">
+                                                    <option value="문화콘텐츠학전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;문화콘텐츠학전공&nbsp;(Cultural Contents Major)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ACD_H1">
+                                                    <option value="미디어커뮤니케이션학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;미디어커뮤니케이션학부&nbsp;(Division of Media &amp; Communication)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ACDE1_H1">
+                                                    <option value="방송·영상·뉴미디어전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;방송·영상·뉴미디어전공&nbsp;(Broadcasting·Film·New Media)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABF01_H1">
+                                                    <option value="베트남어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;베트남어과&nbsp;(Department of Vietnamese)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAP01_H1">
+                                                    <option value="브릭스전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;브릭스전공&nbsp;(BRICs Major)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ANDB2_H1">
+                                                    <option value="사학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;사학과&nbsp;(Department of History)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AANA1_H1">
+                                                    <option value="세계문화예술경영전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;세계문화예술경영전공&nbsp;(Art and Cultural Mediation)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAI01_H1">
+                                                    <option value="스칸디나비아어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;스칸디나비아어과&nbsp;(Department of Scandinavian Languages)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAE01_H1">
+                                                    <option value="스페인어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;스페인어과&nbsp;(Department of Spanish)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABD01_H1">
+                                                    <option value="아랍어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;아랍어과&nbsp;(Department of Arabic)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ACDA1_H1">
+                                                    <option value="언론·정보전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;언론·정보전공&nbsp;(Journalism &amp; Information)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A1CF1_H1">
+                                                    <option value="언어와공학전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;언어와공학전공&nbsp;(Language and Technology)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ANDC2_H1">
+                                                    <option value="언어인지과학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;언어인지과학과&nbsp;(Department of Linguistics and Cognitive Science)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A1CD1_H1">
+                                                    <option value="영미문학·문화학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;영미문학·문화학과&nbsp;(Department of English Literature and Culture)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AFA01_H1">
+                                                    <option value="영어교육과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;영어교육과&nbsp;(Department of English Education)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A1CA1_H1">
+                                                    <option value="영어학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;영어학과&nbsp;(Department of English Linguistics)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A5A01_H1">
+                                                    <option value="외국어로서의한국어교육전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;외국어로서의한국어교육전공&nbsp;(Korean Education as a Foreign Language)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="A5A02_H1">
+                                                    <option value="외국어로서의한국어통번역전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;외국어로서의한국어통번역전공&nbsp;(Korean Interpretation &amp; Translation as a Foreign Language)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ATMB2_H1">
+                                                    <option value="융복합소프트웨어전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;융복합소프트웨어전공&nbsp;(Software Convergence Major)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AJDA1_H1">
+                                                    <option value="융합일본지역전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;융합일본지역전공&nbsp;(Integrated Japanese Studies)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AJD_H1">
+                                                    <option value="융합일본지역학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;융합일본지역학부&nbsp;(Division of Integrated Japanese Studies)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABI01_H1">
+                                                    <option value="이란어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;이란어과&nbsp;(Department of Persian)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAF01_H1">
+                                                    <option value="이탈리아어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;이탈리아어과&nbsp;(Department of Italian)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABG01_H1">
+                                                    <option value="인도어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;인도어과&nbsp;(Department of Hindi)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AJCA1_H1">
+                                                    <option value="일본언어문화전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;일본언어문화전공&nbsp;(Japanese Language, Literature and Culture)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AJC_H1">
+                                                    <option value="일본언어문화학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;일본언어문화학부&nbsp;(Division of Japanese Language, Literature and Culture)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ACBA1_H1">
+                                                    <option value="정치외교학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;정치외교학과&nbsp;(Department of Political Science and Diplomacy)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AFI01_H1">
+                                                    <option value="중국어교육과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;중국어교육과&nbsp;(Department of Chinese Education)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AICA1_H1">
+                                                    <option value="중국언어문화전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;중국언어문화전공&nbsp;(Chinese Language, Literature and Culture)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AIC_H1">
+                                                    <option value="중국언어문화학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;중국언어문화학부&nbsp;(Division of Chinese Language, Literature and Culture)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AIDA1_H1">
+                                                    <option value="중국외교통상전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;중국외교통상전공&nbsp;(Chinese Foreign Affairs and Commerce)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AID_H1">
+                                                    <option value="중국외교통상학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;중국외교통상학부&nbsp;(Division of Chinese Foreign Affairs and Commerce)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ANDA2_H1">
+                                                    <option value="철학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;철학과&nbsp;(Department of Philosophy)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABE01_H1">
+                                                    <option value="태국어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;태국어과&nbsp;(Department of Thai)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ABH11_H1">
+                                                    <option value="터키.아제르바이잔어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;터키.아제르바이잔어과&nbsp;(Department of Turkish and Azerbaijani)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAK01_H1">
+                                                    <option value="포르투갈어과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;포르투갈어과&nbsp;(Department of Portuguese)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAMC1_H1">
+                                                    <option value="프랑스.EU전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;프랑스.EU전공&nbsp;(French and European Studies)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AFB01_H1">
+                                                    <option value="프랑스어교육과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;프랑스어교육과&nbsp;(Department of French Education)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAM_H1">
+                                                    <option value="프랑스어학부">
                                                         &nbsp;(서울)&nbsp;-&nbsp;프랑스어학부&nbsp;(Division of French Language)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AAMA1_H1">
+                                                    <option value="프랑스응용어문학전공">
                                                         &nbsp;(서울)&nbsp;-&nbsp;프랑스응용어문학전공&nbsp;(Applied French Linguistics and Literature)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="AFD01_H1">
+                                                    <option value="한국어교육과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;한국어교육과&nbsp;(Department of Korean Education)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="ACBB1_H1">
+                                                    <option value="행정학과">
                                                         &nbsp;(서울)&nbsp;-&nbsp;행정학과&nbsp;(Department of Public Administration)&nbsp;
                                                     </option>
                                                 </select>
@@ -344,75 +348,78 @@
                                         <td>
                                             <div class="selectBox">
                                                 <select name="ag_compt_fld_cd">
-                                                    <option value="305_H1" selected="">
+                                                    <option>
+                                                        --- 교양분야를 선택해주세요 ---
+                                                    </option>
+                                                    <option value="대학외국어" selected="">
                                                         &nbsp;대학외국어(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="306_H1">
+                                                    <option value="미네르바인문">
                                                         &nbsp;미네르바인문(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="308_H1">
+                                                    <option value="소프트웨어기초">
                                                         &nbsp;소프트웨어기초(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="32W_H1">
+                                                    <option value="생활과스포츠">
                                                         &nbsp;생활과스포츠(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="32Z_H1">
+                                                    <option value="공동교양(한예종)">
                                                         &nbsp;공동교양(한예종)(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="330_H1">
+                                                    <option value="언어와문학">
                                                         &nbsp;언어와문학(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="331_H1">
+                                                    <option value="문화와예술">
                                                         &nbsp;문화와예술(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="332_H1">
+                                                    <option value="역사와철학">
                                                         &nbsp;역사와철학(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="334_H1">
+                                                    <option value="과학과기술">
                                                         &nbsp;과학과기술(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="335_H1">
+                                                    <option value="핵심인문기초">
                                                         &nbsp;핵심인문기초(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="336_H1">
+                                                    <option value="인간과사회">
                                                         &nbsp;인간과사회(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="342_H1">
+                                                    <option value="인성교육">
                                                         &nbsp;인성교육(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="350_H1">
+                                                    <option value="신입생세미나">
                                                         &nbsp;신입생세미나(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="351_H1">
+                                                    <option value="HUFS CAREER">
                                                         &nbsp;HUFS CAREER(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="353_H1">
+                                                    <option value="미래시뮬레이션">
                                                         &nbsp;미래시뮬레이션(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="355_H1">
+                                                    <option value="실용외국어">
                                                         &nbsp;실용외국어(선택)(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="356_H1">
+                                                    <option value="외국인을 위한 한국학">
                                                         &nbsp;외국인을 위한 한국학(서울)&nbsp;
                                                     </option>
                                                 
-                                                    <option value="61_H1">
+                                                    <option value="군사학">
                                                         &nbsp;군사학(서울)&nbsp;
                                                     </option>
                                                 
@@ -434,7 +441,7 @@
 </html>
 
 
-<!--
+<!—
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
@@ -451,4 +458,4 @@
           </form>        
         </div>
 
--->
+—>
